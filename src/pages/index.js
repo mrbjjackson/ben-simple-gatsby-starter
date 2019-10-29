@@ -1,21 +1,47 @@
 import React from "react"
 import { Link } from "gatsby"
 
+
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+// import {graphql, useStaticQuery} from 'gatsby'
+// import BackgroundImage from 'gatsby-background-image'
+
+const IndexPage = () => {
+
+// const data = useStaticQuery(graphql`
+//   query {
+//       desktop: file(relativePath: { eq: "favicon-icon.png" }) {
+//       childImageSharp {
+//           fluid(quality: 80, maxWidth: 1920) {
+//           ...GatsbyImageSharpFluid_withWebp
+//           }
+//       }
+//       }
+//   }
+//   `)
+// const bgImageData = data.desktop.childImageSharp.fluid
+
+return (
+// If you need a full page background image
+// <BackgroundImage
+// Tag="div"
+// className={'bgImage'}
+// fluid={bgImageData}
+// backgroundColor={'#000'}
+// style={{backgroundPositionY: '0' }}
+// > 
+
+  <Layout pageName="home">
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/about/">Go to About page</Link>
   </Layout>
+
+// </BackgroundImage>
 )
+}
 
 export default IndexPage
