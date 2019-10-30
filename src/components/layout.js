@@ -23,14 +23,16 @@ const Layout = ({ children, pageName='default'}) => {
   `)
 
   return (
-    <div className={`mainContainer ${pageName}`}>
-      <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Website built by
-          {` `}
-          <a href="mailto:ben@mrbjjackson.com">Mr BJ Jackson</a>
-        </footer>
+    <div className="allContainer">
+      <div className={`pageContainer ${pageName}`}>
+        <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+      </div>
+      <footer>
+            © {new Date().getFullYear()}, Website built by
+            {` `}
+            <a href="mailto:ben@mrbjjackson.com">Mr BJ Jackson</a>
+      </footer>
     </div>
   )
 }
